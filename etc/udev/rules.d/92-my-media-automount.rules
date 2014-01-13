@@ -1,0 +1,32 @@
+# vim:enc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=udevrules:
+#
+# /etc/udev/rules.d/92-my-media-automount.rules
+
+# Only work on sd*
+KERNEL!="sd[b-z]*", GOTO="my_media_automount_end"
+ACTION=="add", PROGRAM!="/sbin/blkid %N", GOTO="my_media_automount_end"
+
+# get the label if present, otherwise assign one based on device/partition
+ENV{ID_FS_LABEL}!="", ENV{dir_name}="$env{ID_FS_LABEL}"
+ENV{ID_FS_LABEL}=="", ENV{dir_name}="%k"
+
+# create the dir in /media
+ACTION=="add", RUN+="/bin/mkdir -p '/media/$env{dir_name}'"
+
+# global mount options
+ACTION=="add", ENV{mount_options}="-o relatime"
+# filesystem-specific mount options (777/666 dir/file perms for ntfs/vfat)
+#ACTION=="add", ENV{ID_FS_TYPE}=="vfat|ntfs", ENV{mount_options}="$env{mount_options},gid=100,dmask=000,fmask=111,utf8"
+ACTION=="add", ENV{ID_FS_TYPE}=="vfat|ntfs", ENV{mount_options}="$env{mount_options},umask=000,iocharset=utf8,codepage=950"
+
+# automount ntfs filesystems using ntfs-3g driver
+ACTION=="add", ENV{ID_FS_TYPE}=="ntfs", RUN+="/bin/ntfs-3g $env{mount_options} $env{DEVNAME} /media/$env{dir_name}"
+
+# automount all other filesystems
+ACTION=="add", ENV{ID_FS_TYPE}!="ntfs", RUN+="/bin/mount $env{mount_options} $env{DEVNAME} /media/$env{dir_name}"
+
+# clean up after device removal (NOTE : umount has to be done by user to have clean removal)
+ACTION=="remove", ENV{dir_name}!="",RUN+="/bin/rmdir '/media/$env{dir_name}'"
+
+# exit
+LABEL="my_media_automount_end"

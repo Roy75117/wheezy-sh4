@@ -1,0 +1,41 @@
+begin
+   button = KEY_POWER
+   prog = irexec
+   repeat = 0
+   config = /usr/bin/ledctl.sh red && sync;sync;reboot
+end
+
+begin
+   button = KEY_MUTE 
+   prog = irexec
+   repeat = 0
+   config = /usr/bin/ledctl.sh off && sync;sync;halt
+end
+
+begin
+   button = KEY_HOME 
+   prog = irexec
+   repeat = 0
+   config = /usr/bin/ledctl.sh red;service minidlna force-reload;sleep 2;/usr/local/etc/init.d/ushare reload;/usr/bin/ledctl.sh blue
+end
+
+begin
+   button = KEY_RED 
+   prog = irexec
+   repeat = 0
+   config = /usr/bin/ledctl.sh red;service minidlna stop;sleep 2;/usr/local/etc/init.d/ushare stop;/usr/bin/ledctl.sh blue
+end
+
+begin
+   button = KEY_BLUE 
+   prog = irexec
+   repeat = 0
+   config = /usr/bin/ledctl.sh red;service minidlna start;sleep 2;/usr/local/etc/init.d/ushare start;/usr/bin/ledctl.sh blue
+end
+
+begin                      
+  button = KEY_INFO        
+  prog   = irexec          
+  repeat = 0               
+  config = /usr/bin/ledctl.sh red;sync;ls -1 /media |awk '{print i$0}' i='/media/' | xargs umount;/usr/bin/ledctl.sh blue
+ end

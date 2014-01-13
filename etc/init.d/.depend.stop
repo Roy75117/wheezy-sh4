@@ -1,0 +1,17 @@
+TARGETS = minidlna transmission-daemon nmbd apache2 lirc smbd dropbear urandom sendsigs rsyslog umountnfs.sh hwclock.sh networking umountfs umountroot halt reboot
+transmission-daemon: minidlna
+nmbd: minidlna
+apache2: minidlna
+lirc: minidlna
+smbd: minidlna
+dropbear: minidlna
+urandom: minidlna
+sendsigs: lirc smbd transmission-daemon nmbd dropbear apache2 minidlna
+rsyslog: lirc sendsigs dropbear apache2 minidlna
+umountnfs.sh: lirc smbd rsyslog transmission-daemon nmbd dropbear sendsigs apache2 minidlna
+hwclock.sh: rsyslog minidlna
+networking: umountnfs.sh smbd transmission-daemon nmbd apache2 minidlna
+umountfs: lirc umountnfs.sh smbd transmission-daemon urandom nmbd dropbear hwclock.sh networking apache2 minidlna
+umountroot: umountfs minidlna
+halt: umountroot minidlna
+reboot: umountroot minidlna

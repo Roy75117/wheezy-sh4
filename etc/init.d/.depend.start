@@ -1,0 +1,12 @@
+TARGETS = rsyslog transmission-daemon nmbd bootlogs killprocs motd sudo apache2 single lirc smbd dropbear cron rsync minidlna rmnologin rc.local
+INTERACTIVE = apache2
+apache2: rsyslog
+single: killprocs bootlogs motd
+lirc: rsyslog
+smbd: nmbd
+dropbear: rsyslog
+cron: rsyslog
+rsync: rsyslog
+minidlna: lirc rsyslog smbd transmission-daemon nmbd dropbear apache2 bootlogs motd cron sudo rsync
+rmnologin: sudo lirc rsyslog smbd transmission-daemon nmbd dropbear apache2 bootlogs motd cron rsync
+rc.local: lirc rsyslog smbd transmission-daemon nmbd dropbear apache2 bootlogs motd cron sudo rsync
