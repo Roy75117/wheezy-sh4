@@ -29,6 +29,7 @@ start_daemon () {
     else    
         start-stop-daemon --start \
         --chuid $USER \
+		--nicelevel 19 \
 		$START_STOP_OPTIONS \
         --exec $DAEMON -- $OPTIONS || log_end_msg $?
 		log_end_msg 0
