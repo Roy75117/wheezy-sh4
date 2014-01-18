@@ -24,5 +24,6 @@ export NODE_PATH=/opt/node:/opt/node/lib/node_modules
 export PATH=$PATH:/opt/node/bin
 
 export TZ='Asia/Tokyo'
+export LC_ALL="zh_TW.UTF-8"
 #PS1='\t[$?]\u@\h \w \$ '
 PS1='\[\033[01;31m\]\t\[\033[00m\][$?]\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w \$\[\033[00m\] '
