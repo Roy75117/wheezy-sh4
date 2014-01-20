@@ -85,6 +85,7 @@ alias la='ls -A'
 alias l='ls -lh'
 alias free='free -m'
 alias cls='clear'
+alias ps='ps -ef'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
