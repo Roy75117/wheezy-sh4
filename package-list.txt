@@ -62,6 +62,7 @@ grep						install
 groff-base					install
 gzip						install
 hostname					install
+htop						install
 ifupdown					install
 info						install
 initscripts					install
