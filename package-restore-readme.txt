@@ -4,3 +4,12 @@ dpkg --get-selections | grep -v deinstall > ~/package-list.txt
 
 sudo dpkg --clear-selections sudo dpkg --set-selections < package-list.txt sudo apt-get autoremove sudo apt-get dselect-upgrade
 
+
+*prevent package upgrade by apt-get
+
+*Put a package on hold
+echo "package hold" | dpkg --set-selections
+
+*Remove the hold
+echo "package install" | dpkg --set-selections
+
