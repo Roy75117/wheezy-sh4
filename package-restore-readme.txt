@@ -13,3 +13,6 @@ echo "package hold" | dpkg --set-selections
 *Remove the hold
 echo "package install" | dpkg --set-selections
 
+*Check pachage reverse dependency
+apt-cache rdepends packgae
+
