@@ -1,0 +1,10 @@
+[user]
+	name = Roy75117
+	email = roy75117.mobile@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
+[credential]
+	helper = cache --timeout 3600
