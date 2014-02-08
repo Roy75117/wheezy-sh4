@@ -8,6 +8,7 @@ apt						install
 apt-utils					install
 apt-xapian-index				install
 aptitude-common					install
+aria2						install
 base-files					install
 base-passwd					install
 bash						install
@@ -41,7 +42,6 @@ e2fslibs:sh4					install
 e2fsprogs					install
 emdebian-archive-keyring			install
 ept-cache					install
-exfat-fuse					install
 exfat-utils					install
 fakeroot					install
 findutils					install
@@ -96,6 +96,7 @@ libblkid1:sh4					install
 libboost-iostreams1.49.0			install
 libbsd0:sh4					install
 libbz2-1.0:sh4					install
+libc-ares2:sh4					install
 libc-bin					install
 libc-dev-bin					install
 libc6:sh4					install
@@ -297,6 +298,7 @@ tzdata						install
 ucf						install
 udev						hold
 unrar						install
+unzip						install
 update-inetd					install
 util-linux					install
 vim						install
