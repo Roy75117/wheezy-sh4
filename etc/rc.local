@@ -17,4 +17,6 @@ ntpdate time.stdtime.gov.tw
 #start ushare service on /usr/local
 /usr/local/etc/init.d/ushare start
 
+aria2c --daemon --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all
+
 exit 0
