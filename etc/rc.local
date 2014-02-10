@@ -25,5 +25,6 @@ aria2c --conf-path=/etc/aria2.conf
 cp -r /var/www/yaaw /tmp
 ln -s /media /tmp/media_mnt
 
+/usr/bin/ledctl.sh blue
 
 exit 0
