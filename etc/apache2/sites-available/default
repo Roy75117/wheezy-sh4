@@ -1,7 +1,7 @@
 <VirtualHost *:80>
 	ServerAdmin webmaster@localhost
 
-	DocumentRoot /media/sdb1
+	DocumentRoot /tmp
 	<Directory />
 		#Options FollowSymLinks
 		Options Indexes FollowSymLinks Includes ExecCGI
