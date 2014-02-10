@@ -19,6 +19,11 @@ ntpdate time.stdtime.gov.tw
 
 #http://binux.github.io/yaaw/
 #start aria2c remote control protocol
-aria2c --daemon --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all
+#aria2c --daemon --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all
+aria2c --conf-path=/etc/aria2.conf
+
+cp -r /var/www/yaaw /tmp
+ln -s /media /tmp/media_mnt
+
 
 exit 0
