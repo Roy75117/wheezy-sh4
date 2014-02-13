@@ -19,7 +19,8 @@ set color
 set filec
 set history = 100
 set savehist = 100
-set prompt="%B%{^[[35m%}%P%{^[[m%}[`whoami`@`hostname -s`]%{^[[1;31m%}%~%{^[[m%} %#"
+set prompt="%B%{^[[35m%}%P%{^[[m%}[%?]%{^[[32m%}`whoami`@`hostname -s`%{^[[m%} %{^[[1;31m%}%~%{^[[m%} %#"
+#set prompt="%B%{^[[35m%}%P%{^[[m%}[`whoami`@`hostname -s`]%{^[[1;31m%}%~%{^[[m%} %#"
 #set prompt="%B%P[`whoami`@`hostname -s`]%~#"
 
 #----set alias----#
