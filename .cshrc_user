@@ -1,0 +1,24 @@
+#----source armcc compile tool----#
+
+
+#----#export environment----#
+setenv TERM xterm-256color
+
+#----set prompt property----#
+set history = 100
+set savehist = 100
+set prompt="%B%{^[[35m%}%P%{^[[m%}[`whoami`@`hostname -s`]%{^[[1;31m%}%~%{^[[m%} %#"
+#set prompt="%B%P[`whoami`@`hostname -s`]%~#"
+
+#----set alias----#
+alias l ls -lh
+alias ll ls -lah
+alias la ls -A
+
+#----binding hotkey----#
+bindkey "\e[1~" beginning-of-line # Home
+bindkey "\e[7~" beginning-of-line # Home rxvt
+bindkey "\e[2~" overwrite-mode    # Ins
+bindkey "\e[3~" delete-char       # Delete
+bindkey "\e[4~" end-of-line       # End
+bindkey "\e[8~" end-of-line       # End rxvt
