@@ -27,6 +27,7 @@ set prompt="%B%{^[[35m%}%P%{^[[m%}[%?]%{^[[32m%}`whoami`@`hostname -s`%{^[[m%} %
 alias l ls -lh
 alias ll ls -lah
 alias la ls -A
+alias cls clear
 
 #----binding hotkey----#
 bindkey "\e[1~" beginning-of-line # Home
