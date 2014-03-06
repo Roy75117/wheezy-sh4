@@ -1,4 +1,3 @@
-setenv LS_COLORS "di=00;33"
 setenv LANG en_US.UTF-8
 umask 22
 #----source ----#
