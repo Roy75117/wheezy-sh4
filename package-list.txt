@@ -9,6 +9,7 @@ apt-utils					install
 apt-xapian-index				install
 aptitude-common					install
 aria2						install
+avahi-daemon					install
 base-files					install
 base-passwd					install
 bash						install
@@ -27,6 +28,7 @@ cpp-4.7						install
 cron						install
 curl						install
 dash						install
+dbus						install
 debconf						install
 debconf-i18n					install
 debian-archive-keyring				install
@@ -88,6 +90,9 @@ libapt-inst1.5:sh4				install
 libapt-pkg4.12:sh4				install
 libasound2:sh4					install
 libattr1:sh4					install
+libavahi-common-data:sh4			install
+libavahi-common3:sh4				install
+libavahi-core7:sh4				install
 libavcodec53:sh4				install
 libavformat53:sh4				install
 libavutil51:sh4					install
@@ -107,7 +112,9 @@ libcomerr2:sh4					install
 libcups2:sh4					install
 libcurl3:sh4					install
 libcurl3-gnutls:sh4				install
+libdaemon0					install
 libdb5.1:sh4					install
+libdbus-1-3:sh4					install
 libdevmapper1.02.1:sh4				install
 libdirac-encoder0:sh4				install
 libdns88					install
@@ -193,6 +200,7 @@ libstdc++6:sh4					install
 libstdc++6-4.7-dev				install
 libswitch-perl					install
 libsysfs2:sh4					install
+libsystemd-login0:sh4				install
 libtalloc2:sh4					install
 libtasn1-3:sh4					install
 libtdb1:sh4					install
