@@ -67,6 +67,9 @@ set shiftwidth=2 " 設定縮排寬度 = 4
 set tabstop=4    " tab 的字元數
 set softtabstop=4
 " set expandtab   " 用 space 代替 tab
+
+set wildmenu      " Autocomplete file path
+set wildmode=list:longest
  
 set ruler        " 顯示右下角設定值
 set backspace=2  " 在 insert 也可用 backspace
