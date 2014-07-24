@@ -87,3 +87,10 @@ set statusline=%4*%<\%m%<[%f\%r%h%w]\ [%{&ff},%{&fileencoding},%Y]%=\[Position=%
 
 set t_Co=256 
 " colorscheme torte
+
+" vim mapping
+" http://www.cs.swarthmore.edu/help/vim/tags.html
+" map <silent> <F9> :TlistToggle<cr>
+nmap <silent> <F9> :WMToggle<cr>
+map > <C-]>
+map < <C-t>
