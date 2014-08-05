@@ -94,3 +94,4 @@ set t_Co=256
 nmap <silent> <F9> :WMToggle<cr>
 map > <C-]>
 map < <C-t>
+nnoremap - :noh<CR>
