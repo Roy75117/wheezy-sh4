@@ -62,6 +62,7 @@ endif
 " 編輯喜好設定                                                                                                                                                                                                    
 syntax on        " 語法上色顯示
 set nocompatible " VIM 不使用和 VI 相容的模式
+set number
 " set ai           " 自動縮排
 set shiftwidth=2 " 設定縮排寬度 = 4
 set tabstop=4    " tab 的字元數
