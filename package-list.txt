@@ -263,6 +263,7 @@ openssl						install
 p7zip						install
 parted						install
 passwd						install
+pastebinit					install
 patch						install
 perl						install
 perl-base					install
@@ -273,6 +274,7 @@ python						install
 python-apt					install
 python-apt-common				install
 python-chardet					install
+python-configobj				install
 python-debian					install
 python-minimal					install
 python-support					install
