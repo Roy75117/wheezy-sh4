@@ -26,10 +26,12 @@ set prompt="%{^[[35m%}%P%{^[[m%}[%?]%{^[[32m%}`whoami`@`hostname -s`%{^[[m%} %{^
 #set prompt="%B%P[`whoami`@`hostname -s`]%~#"
 
 #----set alias----#
+alias ls ls --color
 alias l ls -lh
 alias ll ls -lah
 alias la ls -A
 alias cls clear
+alias ctags "ctags -R --exclude=.svn"
 
 #----binding hotkey----#
 bindkey "\e[1~" beginning-of-line # Home
