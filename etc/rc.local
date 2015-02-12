@@ -11,20 +11,24 @@
 #
 # By default this script does nothing.
 
-#Time Adjustment
+#load wifi module for xiami wifi
+if [ $(lsmod | grep mt7601Usta | wc -l) -lt 1 ];then
+   insmod /lib/modules/mt7601Usta.ko
+fi
+
 ntpdate time.stdtime.gov.tw
 
 #start ushare service on /usr/local
 /usr/local/etc/init.d/ushare start
 
-#http://binux.github.io/yaaw/
-#start aria2c remote control protocol
+#Start aria rpc
 #aria2c --daemon --enable-rpc --rpc-listen-all=true --rpc-allow-origin-all
 aria2c --conf-path=/etc/aria2.conf
 
-cp -r /var/www/yaaw /tmp
+#cp -r /var/www/yaaw /tmp
+wget http://dl.dropboxusercontent.com/s/x3e6dz4ragnvi8i/yaaw.zip -O /tmp/yaaw.zip
+unzip /tmp/yaaw.zip  -d /tmp
 ln -s /media /tmp/media_mnt
+rm /tmp/yaaw.zip
 
 /usr/bin/ledctl.sh blue
-
-exit 0
