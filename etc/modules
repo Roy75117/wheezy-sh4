@@ -1,0 +1,16 @@
+# /etc/modules: kernel modules to load at boot time.
+#
+# This file contains the names of kernel modules that should be loaded
+# at boot time, one per line. Lines beginning with "#" are ignored.
+# Parameters can be specified after the module name.
+
+#load modules for xiami wifi
+mt7601Usta
+
+#laod HDMI display
+stmfb display0=640x480-16@60:3M:0:PAL:RGB
+stm_v4l2
+stmcore-display-sti7105 hdmi0=enable
+stmvbi
+stmvout
+
