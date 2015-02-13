@@ -13,7 +13,8 @@
 
 #load wifi module for xiami wifi
 if [ $(lsmod | grep mt7601Usta | wc -l) -lt 1 ];then
-   insmod /lib/modules/mt7601Usta.ko
+   insmod /lib/modules/wireless/mt7601Usta.ko # xiami wifi
+   insmod /lib/modules/wireless/rt2870sta.ko #wifi
 fi
 
 ntpdate time.stdtime.gov.tw

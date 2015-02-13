@@ -4,8 +4,9 @@
 # at boot time, one per line. Lines beginning with "#" are ignored.
 # Parameters can be specified after the module name.
 
-#load modules for xiami wifi
+#load modules for wifi
 mt7601Usta
+rt2870sta
 
 #laod HDMI display
 stmfb display0=640x480-16@60:3M:0:PAL:RGB
