@@ -1,4 +1,6 @@
 adduser						install
+alsa-base					install
+alsa-utils					install
 apache2						install
 apache2-mpm-worker				install
 apache2-utils					install
@@ -177,12 +179,14 @@ libpam-modules-bin				install
 libpam-runtime					install
 libpam0g:sh4					install
 libparted0debian1:sh4				install
+libpci3:sh4					install
 libpcre3:sh4					install
 libpipeline1:sh4				install
 libpopt0:sh4					install
 libprocps0:sh4					install
 libreadline6:sh4				install
 librtmp0:sh4					install
+libsamplerate0:sh4				install
 libsasl2-2:sh4					install
 libsasl2-modules:sh4				install
 libschroedinger-1.0-0:sh4			install
@@ -265,6 +269,7 @@ parted						install
 passwd						install
 pastebinit					install
 patch						install
+pciutils					install
 perl						install
 perl-base					install
 perl-modules					install
