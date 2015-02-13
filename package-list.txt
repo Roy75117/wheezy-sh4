@@ -256,6 +256,7 @@ libtinfo5:sh4					install
 libudev0:sh4					hold
 liburi-perl					install
 libusb-0.1-4:sh4				install
+libusb-1.0-0:sh4				install
 libustr-1.0-1:sh4				install
 libuuid1:sh4					install
 libva1:sh4					install
@@ -358,6 +359,7 @@ udev						hold
 unrar						install
 unzip						install
 update-inetd					install
+usbutils					install
 util-linux					install
 vim						install
 vim-common					install
